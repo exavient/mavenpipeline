@@ -1,8 +1,9 @@
-pipeline { 
-    agent any  
-tools { 
-        maven 'Maven' 
+ pipeline {
+    agent any
+    tools { 
+         maven 'Maven' 
         jdk 'JAVA_HOME' 
+    
     }
     stages {
         stage ('Initialize') {
@@ -13,10 +14,11 @@ tools {
                 ''' 
             }
         }
-    
-        stage('Build') { 
-            steps { 
-               echo 'This is a minimal pipeline.' 
+
+        stage ('Build') {
+            steps {
+                echo 'This is a minimal pipeline.'
             }
         }
     }
+}
