@@ -17,13 +17,10 @@
 
         stage ('Build') {
             steps {
-<<<<<<< HEAD
                 sh 'mvn -f my-app/pom.xml -Dmaven.test.failure.ignore=true install' 
-            
-=======
-                sh 'mvn -Dmaven.test.failure.ignore=true install' 
+             
  
->>>>>>> eeb724659452a477a3fc021f5213c6976054f564
+
             }
         }
         stage('Results') {
@@ -31,10 +28,9 @@
              junit '**/target/surefire-reports/TEST-*.xml'
               //archive 'target/*.jar'
     }
-<<<<<<< HEAD
+
    }
   }
 }
-=======
-}
->>>>>>> eeb724659452a477a3fc021f5213c6976054f564
+
+
