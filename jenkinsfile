@@ -18,7 +18,6 @@
         stage ('Build') {
             steps {
                 sh 'mvn -f my-app/pom.xml -Dmaven.test.failure.ignore=true install' 
-             
             
             }
         }
